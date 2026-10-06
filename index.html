@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Splitter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>💰 Expense Splitter</h1>
+    <p class="subtitle">Track group expenses, settle up easily</p>
+
+    <div class="section">
+      <label>Group Name</label>
+      <input type="text" id="groupName" placeholder="e.g. Goa Trip 2026">
+    </div>
+
+    <div class="section">
+      <label>Add Member</label>
+      <div class="row">
+        <input type="text" id="memberInput" placeholder="Member name">
+        <button id="addMemberBtn">Add</button>
+      </div>
+      <div id="memberList" class="chip-list"></div>
+    </div>
+
+    <div class="section">
+      <label>Add Expense</label>
+      <input type="text" id="expenseDesc" placeholder="What was it for? (e.g. Dinner)">
+      <input type="number" id="expenseAmount" placeholder="Amount (₹)">
+      <select id="paidBy">
+        <option value="">Who paid?</option>
+      </select>
+      <button id="addExpenseBtn">Add Expense</button>
+    </div>
+
+    <div class="section">
+      <label>Expenses</label>
+      <div id="expenseList" class="expense-list"></div>
+    </div>
+
+    <div class="section">
+      <label>Settlement</label>
+      <div id="settlement" class="output">Add members and expenses to see settlement</div>
+    </div>
+
+    <button id="resetBtn" class="danger">Reset All</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
